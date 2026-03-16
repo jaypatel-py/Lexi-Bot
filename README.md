@@ -80,9 +80,39 @@ sequenceDiagram
 | **Framework** | LlamaIndex |
 | **Document Loaders** | PDF/DOCX parsers |
 | **Embeddings** | HuggingFace (all-MiniLM-L6-v2) |
-| **Vector DB** | ChromaDB |
+| **Vector DB** | ChromaDB (+ Qdrant for dashboard) |
 | **LLM** | Groq API (Llama 3) |
 | **Deployment** | Docker |
+
+---
+
+## Environment Setup
+
+### 1. Create Environment File
+
+```bash
+# Copy the example environment file
+cp .env.example .env
+```
+
+### 2. Configure API Keys
+
+Edit `.env` and add your Groq API key:
+
+```env
+GROQ_API_KEY=your_actual_api_key_here
+QDRANT_URL=http://localhost:6333
+```
+
+**Get Groq API Key:**
+1. Visit https://console.groq.com/keys
+2. Sign up or log in
+3. Create a new API key (free tier available)
+4. Paste into `.env`
+
+**Free Tier Limits:**
+- Llama 3: 14,400 requests/day
+- Mixtral: 1,440 requests/day
 
 ---
 
@@ -95,9 +125,12 @@ lexi-bot/
 │   ├── pdf/
 │   ├── docx/
 │   └── txt/
-├── docker-compose.yml  # ChromaDB service
+├── docs/               # Documentation guides
+├── scripts/            # Utility scripts (migration, etc.)
+├── docker-compose.yml  # ChromaDB & Qdrant services
 ├── Dockerfile
 ├── requirements.txt    # Python dependencies
+├── .env.example        # Environment variables template
 └── README.md           # This file
 ```
 
@@ -110,29 +143,29 @@ This project follows a **notebook-first approach**: prototype in Jupyter, then r
 ```mermaid
 flowchart LR
     A[Notebook Prototypes] --> B[MVP Prototype]
-    
+
     subgraph A[Phase 1: Notebooks]
         A1[1. Document Loading]
         A2[2. Text Chunking]
         A3[3. Metadata Extraction]
         A4[4. Embeddings]
         A5[5. Vector Store]
-        A6[6. Retrieval]
-        A7[7. LLM Integration]
+        A6[6. Groq LLM Integration]
+        A7[7. Prompt Engineering]
         A8[8. Full Pipeline]
     end
-    
+
     subgraph B[Phase 2: Production]
         B1[src/ modules]
         B2[Streamlit App]
     end
-    
+
     style A1 fill:#c8e6c9
     style A2 fill:#c8e6c9
     style A3 fill:#c8e6c9
     style A4 fill:#c8e6c9
     style A5 fill:#c8e6c9
-    style A6 fill:#fff9c4
+    style A6 fill:#c8e6c9
     style A7 fill:#fff9c4
     style A8 fill:#fff9c4
 ```
@@ -146,12 +179,14 @@ flowchart LR
 2. **Text Chunking** - Split documents into manageable chunks
 3. **Metadata Extraction** - Extract structured information from documents
 4. **Embeddings** - Generate vector representations using HuggingFace
-5. **Vector Store** - Store and query vectors with ChromaDB
+5. **Vector Store** - Store and query vectors with ChromaDB (+ Qdrant for visualization)
+6. **Groq LLM Integration** - Connect to Groq API, streaming responses, RAG with context
+
 
 **Next Steps:**
-6. Retrieval strategies
-7. Groq LLM integration
-8. Full RAG pipeline
+7. Prompt Engineering - Legal-specific prompt templates
+8. Full RAG Pipeline - End-to-end question answering
+9. Evaluation - Test answer quality and relevance
 
 After completing the notebooks, the code will be refactored into production modules under `src/`.
 
