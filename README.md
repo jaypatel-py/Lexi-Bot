@@ -166,7 +166,7 @@ flowchart LR
     style A4 fill:#c8e6c9
     style A5 fill:#c8e6c9
     style A6 fill:#c8e6c9
-    style A7 fill:#fff9c4
+    style A7 fill:#c8e6c9
     style A8 fill:#fff9c4
 ```
 
@@ -181,10 +181,9 @@ flowchart LR
 4. **Embeddings** - Generate vector representations using HuggingFace
 5. **Vector Store** - Store and query vectors with ChromaDB (+ Qdrant for visualization)
 6. **Groq LLM Integration** - Connect to Groq API, streaming responses, RAG with context
-
+7. **Prompt Engineering** - Legal-specific prompt templates, chain-of-thought, few-shot examples
 
 **Next Steps:**
-7. Prompt Engineering - Legal-specific prompt templates
 8. Full RAG Pipeline - End-to-end question answering
 9. Evaluation - Test answer quality and relevance
 
