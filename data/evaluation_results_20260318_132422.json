@@ -1,0 +1,106 @@
+{
+  "evaluation_date": "2026-03-18T13:24:22.682671",
+  "total_queries": 5,
+  "aggregate_metrics": {
+    "avg_response_time_seconds": 4.01,
+    "avg_relevance_score": 3.6,
+    "avg_chunks_used": 3.0,
+    "avg_estimated_tokens": 1481.0,
+    "citations_found_percentage": 80.0,
+    "source_accuracy_percentage": 100.0
+  },
+  "individual_evaluations": [
+    {
+      "query": "What are the forest conservation issues?",
+      "answer": "According to the provided context, the forest conservation issues mentioned are:\n\n1. Destruction of forests due to agriculture (Paragraph 1).\n2. Depletion of forests due to rapid urbanization, unchecked industrialization, encroachments, etc. (Paragraph 3).\n3. Insufficient forest cover in India, which is about 21.76% of the total landmass (Paragraph 4).\n4. Encroachments on forest areas, with almost 13,000 sq. km of forests under encroachment (Paragraph 5).\n5. Need to transform from an anthropocentric approach to an ecocentric approach for the interest of the environment (Paragraph 7).\n\nAdditionally, the context mentions the following specific issues:\n\n- The exploitation of the Singampatti Zamin forest lands in Tamil Nadu, where the lease holders cleared out the forests and started cultivating crops for over 95 years (Paragraph 8).",
+      "sources": [
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_docx.txt"
+      ],
+      "metrics": {
+        "response_time_seconds": 1.87,
+        "chunks_used": 3,
+        "context_length_chars": 4813,
+        "estimated_tokens": 1336,
+        "relevance_score": 4,
+        "relevance_reason": "The answer provides a comprehensive list of forest conservation issues, including destruction due to agriculture, urbanization, and industrialization, as well as specific examples like the exploitation of Singampatti Zamin forest lands. However, it does not fully address the question as it seems to be based on a provided context that is not explicitly stated in the question. Nonetheless, the answer is mostly relevant and addresses the question well.",
+        "citations_found": true,
+        "sources_cited": [],
+        "source_accuracy": true
+      }
+    },
+    {
+      "query": "What is the penalty for violating the Forest Conservation Act?",
+      "answer": "I don't have enough information in the provided context regarding the penalty for violating the Forest Conservation Act.",
+      "sources": [
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_docx.txt",
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_pdf.txt"
+      ],
+      "metrics": {
+        "response_time_seconds": 0.31,
+        "chunks_used": 3,
+        "context_length_chars": 5660,
+        "estimated_tokens": 1553,
+        "relevance_score": 4,
+        "relevance_reason": "The answer acknowledges the lack of information in the provided context, which is a good approach. However, it does not provide any additional information or context about the Forest Conservation Act, which would make it a more complete answer.",
+        "citations_found": false,
+        "sources_cited": [],
+        "source_accuracy": true
+      }
+    },
+    {
+      "query": "What approval is needed to use forest land for non-forest purposes?",
+      "answer": "According to the context, prior approval of the Government of India is required for assigning use of forest land for non-forestry purposes, by way of lease or otherwise to any private person, or to any authority, corporation, agency or other organization, as per Section 2 of the Forest Conservation Act, 1980.",
+      "sources": [
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_docx.txt"
+      ],
+      "metrics": {
+        "response_time_seconds": 0.33,
+        "chunks_used": 3,
+        "context_length_chars": 5195,
+        "estimated_tokens": 1438,
+        "relevance_score": 5,
+        "relevance_reason": "The answer directly addresses the question by providing specific information about the approval required to use forest land for non-forest purposes, citing a relevant law (Forest Conservation Act, 1980) and a specific section (Section 2).",
+        "citations_found": true,
+        "sources_cited": [],
+        "source_accuracy": true
+      }
+    },
+    {
+      "query": "What is the constitutional basis for forest protection in India?",
+      "answer": "The constitutional basis for forest protection in India is mentioned in the context of Article 14 of the Constitution of India, 1950, which deals with the right to equality. It is stated that the protection of forests is in the interest of mankind, as the depletion of forests would significantly affect the underprivileged sections of society, violating their right to equality under Article 14. \n\n(Paragraph 30 of the judgment in State of Telangana and Others v. Mohd. Abdul Qasim(Dead) Per LRs (2024) 6 SCC 461)",
+      "sources": [
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_docx.txt"
+      ],
+      "metrics": {
+        "response_time_seconds": 1.51,
+        "chunks_used": 3,
+        "context_length_chars": 5195,
+        "estimated_tokens": 1437,
+        "relevance_score": 2,
+        "relevance_reason": "The answer mentions Article 14 of the Constitution of India, which deals with the right to equality, but it does not directly address the constitutional basis for forest protection in India. The connection between forest protection and the right to equality is not clearly explained, making the answer mostly irrelevant with some relevant points.",
+        "citations_found": true,
+        "sources_cited": [],
+        "source_accuracy": true
+      }
+    },
+    {
+      "query": "What did the Supreme Court say about tiger reserves?",
+      "answer": "The context does not explicitly mention the Supreme Court's statement about tiger reserves. However, it mentions that a healthy tiger population is an indicator of sustainable development in the 13 tiger range countries (Paragraph 1).\n\nAdditionally, the Deputy Director and Wildlife Warden of the Kalakkad-Mundanthurai Tiger Reserve stated that the entire area leased out to the tea estate by the former Zamindar of Singampatti forest lands forms the core of the Kalakkad- Mundanthurai Tiger Reserve and has been declared as \"Core Critical Tiger Habitat\" vide GO No. 145 dated 28th December, 2007, issued by Environment & Forests Department, Government of India (Paragraph 13).",
+      "sources": [
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_docx.txt",
+        "A_John_Kennedy_vs_The_State_Of_Tamil_Nadu_on_24_March_2025_1_extracted_from_pdf.txt"
+      ],
+      "metrics": {
+        "response_time_seconds": 16.05,
+        "chunks_used": 3,
+        "context_length_chars": 6029,
+        "estimated_tokens": 1643,
+        "relevance_score": 3,
+        "relevance_reason": "The answer partially addresses the question by mentioning the context of tiger reserves, but it does not directly answer what the Supreme Court said about tiger reserves. It provides some relevant information about tiger reserves, but misses the key point of the question.",
+        "citations_found": true,
+        "sources_cited": [],
+        "source_accuracy": true
+      }
+    }
+  ]
+}

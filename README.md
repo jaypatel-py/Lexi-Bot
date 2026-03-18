@@ -153,6 +153,7 @@ flowchart LR
         A6[6. Groq LLM Integration]
         A7[7. Prompt Engineering]
         A8[8. Full Pipeline]
+        A9[9. Evaluation]
     end
 
     subgraph B[Phase 2: Production]
@@ -167,7 +168,8 @@ flowchart LR
     style A5 fill:#c8e6c9
     style A6 fill:#c8e6c9
     style A7 fill:#c8e6c9
-    style A8 fill:#fff9c4
+    style A8 fill:#c8e6c9
+    style A9 fill:#c8e6c9
 ```
 
 ---
@@ -176,18 +178,26 @@ flowchart LR
 
 **Completed Notebooks:**
 1. **Document Loading** - Load PDF and DOCX files, extract text and metadata
-2. **Text Chunking** - Split documents into manageable chunks
-3. **Metadata Extraction** - Extract structured information from documents
-4. **Embeddings** - Generate vector representations using HuggingFace
-5. **Vector Store** - Store and query vectors with ChromaDB (+ Qdrant for visualization)
+2. **Text Chunking** - Split documents into manageable chunks with SentenceSplitter
+3. **Metadata Extraction** - Extract legal metadata (citations, dates, bench info) using regex
+4. **Embeddings** - Generate vector representations using HuggingFace sentence-transformers
+5. **Vector Store** - Store and query vectors with ChromaDB
 6. **Groq LLM Integration** - Connect to Groq API, streaming responses, RAG with context
 7. **Prompt Engineering** - Legal-specific prompt templates, chain-of-thought, few-shot examples
+8. **Full RAG Pipeline** - End-to-end question answering with retrieval and generation
+9. **Evaluation** - Test answer quality with relevance scoring, source accuracy verification, and performance metrics
+
+**Key Features Implemented:**
+- Context limiting to stay within Groq free tier rate limits (6K TPM)
+- Retry logic with exponential backoff for API rate limits
+- Metadata enrichment for legal citations (INSC, SCC, dates, bench)
+- Comprehensive evaluation metrics (relevance, citations, accuracy, response time)
 
 **Next Steps:**
-8. Full RAG Pipeline - End-to-end question answering
-9. Evaluation - Test answer quality and relevance
-
-After completing the notebooks, the code will be refactored into production modules under `src/`.
+- Refactor notebook code into production modules under `src/`
+- Build Streamlit dashboard for interactive Q&A
+- Add support for more document formats (HTML, TXT)
+- Implement advanced retrieval strategies (hybrid search, re-ranking)
 
 ---
 
